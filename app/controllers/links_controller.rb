@@ -69,7 +69,7 @@ class LinksController < ApplicationController
   end
 
   def downvote
-    @downvote = Link.find(params[:id])
+    @link = Link.find(params[:id])
     @link.downvote_by current_user
     redirect_back fallback_location: root_path
   end
